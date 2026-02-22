@@ -1,2 +1,2 @@
 # ntractive-prfle-card
-A project, including responsive layout and JavaScript functions
+A practice-exercise project, including responsive layout and JavaScript functions.
