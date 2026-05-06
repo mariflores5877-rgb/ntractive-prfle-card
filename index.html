@@ -3,8 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name=" description" />
-    <title>Document</title>
+    <meta name="title" property="og:title" content="Interactive Profile Card" />
+    <meta property="og:type" content="website" />
+    <meta
+      name="image"
+      property="og:image"
+      content="https://mariflores5877-rgb.github.io/interactive-profile-card/images/startupstockphotos-desk-593327.jpg"
+    />
+    /*Take care of this*/
+    <meta
+      name="description"
+      property="og:description"
+      content="An interactive profile card built with HTML, CSS, and JavaScript featuring an editable profile with real-time updates."
+    />
+    <meta name="author" content="Marisol Flores" />
+    <title>Profile Card</title>
   </head>
-  <body></body>
+  <body>
+    <main class="page">
+      <section class="card">
+        <div class="card__avatar-container">
+          <img src="" alt="" class="card__avatar" />
+        </div>
+        <div class="card__info">
+          <h1 class="card__name">Marisol Flores</h1>
+          <p class="card__title">Software Engineer</p>
+          <p class="card__bio">I am an intelligent and collaborative person</p>
+        </div>
+
+        <div class="card__links">
+          <a href="" class="card__link">GitHub</a>
+          <a href="" class="card__link">LinkedIn</a>
+        </div>
+
+        <button class="card__btn" type="button" id="edit-btn">
+          Edit Profile
+        </button>
+        <button id="theme-toggle">Light/Dark</button>
+      </section>
+    </main>
+
+    <div class="modal" id="edit-modal">
+      <div class="modal__container">
+        <h2 class="modal__title">Edit Profile</h2>
+        <form id="edit-form" class="modal__form">
+          <label for="name">
+            Name
+            <input
+              id="name"
+              type="text"
+              class="modal__input"
+              placeholder="Type your name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+          </label>
+          <label for="title">
+            Title
+            <input
+              id="title"
+              type="text"
+              class="modal__input"
+              placeholder="Type your title"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+          </label>
+          <label for="bio">
+            Bio
+            <input
+              id="bio"
+              type="text"
+              class="modal__input"
+              placeholder="Type your bio"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+          </label>
+          <button type="button" id="cancel-edit">Cancel</button>
+          <button type="submit" id="">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
